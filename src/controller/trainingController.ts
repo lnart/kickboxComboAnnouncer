@@ -1,8 +1,7 @@
 import combis from "./comboController";
 
-export function createArrayOfCombos(req, res) {
+export function createArrayOfCombos(requestBody) {
   const arrayOfCombos = [];
-  const requestBody = req.body;
   delete requestBody.minutes;
   const length = Object.keys(requestBody).length;
   for (const key in requestBody) {
